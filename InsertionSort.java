@@ -4,8 +4,8 @@ public class InsertionSort {
     /**
      * 函数和源代码不一样之处：
      * 由于列表下标从0开始，所以：
-     * 第2行range函数起始值为1；
-     * 第6行i>0改为i>=0。
+     * 第11行for循环有两个“减1”；
+     * 第14行i>0改为i>=0。
      */
     private static void INSERTION_SORT(int[] A){
         for(int j=2-1;j<=A.length-1;j++){
