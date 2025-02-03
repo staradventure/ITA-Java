@@ -1,13 +1,16 @@
+package Chapter2;
+
 import java.util.Arrays;
 
 public class MergeSort {
     /**
+     * Merge函数来自于第2章算法基础，2.3.1分治法。
      * MERGE函数和原伪代码不一样之处：
      * 第15行和第18行：原伪代码中的L和R数组下标从1开始，这里改为从0开始。
      * 第19行：A的下标引用在原伪代码的基础上加了1。
      * 第23行和第24行：原伪代码中的i和j的初始值是1，这里为了与下标匹配，减1。
      */
-    private static void MERGE(int[] A,int p,int q,int r){
+    public static void MERGE(int[] A, int p, int q, int r){
         int n1=q-p+1;
         int n2=r-q;
         int[] L=new int[n1+1];
@@ -34,29 +37,12 @@ public class MergeSort {
         }
     }
 
-    private static void MERGE_SORT(int[] A,int p,int r){
+    public static void MERGE_SORT(int[] A, int p, int r){
         if(p<r){
             int q=(int)Math.floor((double) (p + r) /2);
             MERGE_SORT(A,p,q);
             MERGE_SORT(A,q+1,r);
             MERGE(A,p,q,r);
         }
-    }
-
-    private static void test1(){
-        int[] A={0,0,0,0,0,0,0,0,0,2,4,5,7,1,2,3,6,0};
-        MERGE(A,9,12,16);
-        System.out.println(Arrays.toString(A));
-    }
-
-    private static void test2(){
-        int[] A={9,8,7,6,5,4,3,2,1};
-        MERGE_SORT(A,0,A.length-1);
-        System.out.println(Arrays.toString(A));
-    }
-
-    public static void main(String[] args) {
-        test1();//[0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 2, 3, 4, 5, 6, 7, 0]
-        test2();//[1, 2, 3, 4, 5, 6, 7, 8, 9]
     }
 }
