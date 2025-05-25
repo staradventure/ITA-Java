@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+package Chapter4;
 
 public class SquareMatrixMultiplyRecursive {
     private static int[][] give_index(int n){

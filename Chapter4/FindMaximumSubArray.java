@@ -1,3 +1,5 @@
+package Chapter4;
+
 public class FindMaximumSubArray {
     public static int[] FIND_MAX_CROSSING_SUBARRAY(int[] A,int low,int mid,int high){
         int sum=0;
@@ -53,9 +55,5 @@ public class FindMaximumSubArray {
         }
     }
 
-    public static void main(String[] args) {
-        int[] A={13,-3,-25,20,-3,-16,-23,18,20,-7,12,-5,-22,15,-4,7};
-        int[] result=FIND_MAXIMUM_SUBARRAY(A,0,A.length-1);
-        System.out.println(result[0]+" "+result[1]+" "+result[2]);
-    }
+
 }
